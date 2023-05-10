@@ -15,6 +15,7 @@ const styles = StyleSheet.create({
   },
   bgWhite: {
     backgroundColor: '#fff',
+    color: '#000',
   },
 });
 
