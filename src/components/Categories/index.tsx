@@ -15,7 +15,7 @@ function Categories(props: IProps) {
     <FlatList
       horizontal
       data={categories}
-      style={{marginRight: -32}}
+      style={{marginRight: -32, minHeight: 50}}
       showsHorizontalScrollIndicator={false}
       renderItem={({item, index}) => (
         <TouchableOpacity onPress={() => onCategoryPress(item)}>

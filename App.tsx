@@ -3,7 +3,7 @@ import {SafeAreaView, StyleSheet} from 'react-native';
 import Home from './src/screens/Home';
 function App(): JSX.Element {
   return (
-    <SafeAreaView style={[styles.flex, styles.bgWhite]}>
+    <SafeAreaView style={[styles.flex, styles.bgWhite, styles.container]}>
       <Home />
     </SafeAreaView>
   );
@@ -16,6 +16,10 @@ const styles = StyleSheet.create({
   bgWhite: {
     backgroundColor: '#fff',
     color: '#000',
+  },
+  container: {
+    padding: 20,
+    paddingBottom: 0,
   },
 });
 
