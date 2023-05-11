@@ -1,7 +1,7 @@
 import React from 'react';
 import {Image, Text, TouchableOpacity, View} from 'react-native';
 import styles from './styles';
-import {useNavigate} from '../../hooks/useNavigate';
+import {useAppNavigation} from '../../hooks/useNavigate';
 
 interface IProps {
   id: number;
@@ -14,7 +14,7 @@ function AttractionCard(props: IProps) {
   const {imageSrc, title, subtitle, id} = props;
 
   //Utils
-  const navigation = useNavigate();
+  const navigation = useAppNavigation();
 
   return (
     <TouchableOpacity

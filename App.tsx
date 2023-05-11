@@ -11,14 +11,13 @@ const Stack = createStackNavigator<RootStackParamList>();
 function App(): JSX.Element {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home" id="MyStack">
-        <Stack.Screen
-          name="Home"
-          component={Home}
-          options={{
-            header: () => null,
-          }}
-        />
+      <Stack.Navigator
+        initialRouteName="Home"
+        id="MyStack"
+        screenOptions={{
+          headerShown: false,
+        }}>
+        <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="AttractionDetails" component={AttractionDetails} />
       </Stack.Navigator>
     </NavigationContainer>
