@@ -1,5 +1,6 @@
 import React from 'react';
 import {View} from 'react-native';
+import AttractionCard from '../../components/AttractionCard';
 import Categories from '../../components/Categories';
 import Subtitle from '../../components/UI/Typography/Subtitle';
 import Title from '../../components/UI/Typography/Title';
@@ -36,6 +37,30 @@ function Home() {
         ]}
         onCategoryPress={handleCategoryPress}
       />
+      <View style={styles.row}>
+        <AttractionCard
+          imageSrc="https://www.planetware.com/photos-large/F/france-paris-eiffel-tower.jpg"
+          title="Vahid Hasani"
+          subtitle="Rome"
+        />
+        <AttractionCard
+          imageSrc="https://www.planetware.com/photos-large/F/france-paris-eiffel-tower.jpg"
+          title="Vahid Hasani"
+          subtitle="Rome"
+        />
+      </View>
+      <View style={styles.row}>
+        <AttractionCard
+          imageSrc="https://www.planetware.com/photos-large/F/france-paris-eiffel-tower.jpg"
+          title="Vahid Hasani"
+          subtitle="Rome"
+        />
+        <AttractionCard
+          imageSrc="https://www.planetware.com/photos-large/F/france-paris-eiffel-tower.jpg"
+          title="Vahid Hasani"
+          subtitle="Rome"
+        />
+      </View>
     </View>
   );
 }
