@@ -54,6 +54,15 @@ function AttractionDetails() {
               />
             </Pressable>
           </View>
+          <View style={styles.footer}>
+            {foundItem.images.map(image => (
+              <Image
+                progressiveRenderingEnabled
+                source={{uri: image}}
+                style={styles.thumbnail}
+              />
+            ))}
+          </View>
         </ImageBackground>
 
         <View style={[styles.row, styles.titleContainer]}>

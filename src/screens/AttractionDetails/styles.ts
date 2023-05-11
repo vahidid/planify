@@ -12,8 +12,8 @@ export default StyleSheet.create({
 
   image: {
     flex: 1,
-    justifyContent: 'flex-start',
-    minHeight: height / 2 - 50,
+    justifyContent: 'space-between',
+    height: height / 2 - 50,
     padding: 20,
   },
   roundImage: {
@@ -41,5 +41,14 @@ export default StyleSheet.create({
   titleContainer: {
     marginTop: 24,
     paddingHorizontal: 5,
+  },
+  footer: {
+    flexDirection: 'row',
+    // width: '100%',
+    marginHorizontal: 0,
+  },
+  thumbnail: {
+    height: 65,
+    width: '25%',
   },
 });
