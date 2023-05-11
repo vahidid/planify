@@ -1,7 +1,6 @@
 import React from 'react';
 import {FlatList, Text, TouchableOpacity} from 'react-native';
 import styles from './styles';
-
 interface IProps {
   categories: string[];
   selectedCategory: string;
@@ -15,7 +14,7 @@ function Categories(props: IProps) {
     <FlatList
       horizontal
       data={categories}
-      style={{marginRight: -32, minHeight: 50}}
+      style={{minHeight: 50}}
       showsHorizontalScrollIndicator={false}
       renderItem={({item, index}) => (
         <TouchableOpacity onPress={() => onCategoryPress(item)}>

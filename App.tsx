@@ -1,26 +1,27 @@
+import 'react-native-gesture-handler';
 import React from 'react';
-import {SafeAreaView, StyleSheet} from 'react-native';
 import Home from './src/screens/Home';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+import AttractionDetails from './src/screens/AttractionDetails';
+import {RootStackParamList} from './src/types/screen';
+
+const Stack = createStackNavigator<RootStackParamList>();
+
 function App(): JSX.Element {
   return (
-    <SafeAreaView style={[styles.flex, styles.bgWhite, styles.container]}>
-      <Home />
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home" id="MyStack">
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{
+            header: () => null,
+          }}
+        />
+        <Stack.Screen name="AttractionDetails" component={AttractionDetails} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  flex: {
-    flex: 1,
-  },
-  bgWhite: {
-    backgroundColor: '#fff',
-    color: '#000',
-  },
-  container: {
-    padding: 20,
-    paddingBottom: 0,
-  },
-});
-
 export default App;
