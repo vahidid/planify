@@ -111,7 +111,16 @@ export default StyleSheet.create({
   map: {
     width: '100%',
     height: 300,
-    marginBottom: 40,
+    marginBottom: 10,
     borderRadius: 15,
+  },
+
+  mapText: {
+    fontWeight: 'bold',
+    fontSize: 16,
+    color: '#4681A3',
+    textAlign: 'center',
+    marginBottom: 80,
+    padding: 16,
   },
 });

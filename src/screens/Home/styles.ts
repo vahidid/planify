@@ -9,7 +9,6 @@ export default StyleSheet.create({
   row: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    flexWrap: 'wrap',
   },
   emptyText: {
     textAlign: 'center',

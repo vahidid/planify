@@ -148,7 +148,6 @@ function AttractionDetails() {
           </View>
         </View>
       </View>
-
       <MapView
         style={styles.map}
         initialRegion={{
@@ -165,6 +164,20 @@ function AttractionDetails() {
           title={foundItem.name}
         />
       </MapView>
+
+      <Text
+        onPress={() =>
+          navigation.navigate('Map', {
+            coordinate: {
+              latitude: Number(foundItem.coordinates.lat),
+              longitude: Number(foundItem.coordinates.lon),
+            },
+            name: foundItem.name,
+          })
+        }
+        style={styles.mapText}>
+        Show full screen map
+      </Text>
     </ScrollView>
   );
 }
