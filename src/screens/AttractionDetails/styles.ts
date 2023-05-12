@@ -3,7 +3,9 @@ import {Dimensions, StyleSheet} from 'react-native';
 const {height} = Dimensions.get('window');
 
 export default StyleSheet.create({
-  container: {margin: 28},
+  container: {
+    margin: 28,
+  },
   horizontal: {
     flexDirection: 'row',
     justifyContent: 'space-around',
@@ -13,7 +15,7 @@ export default StyleSheet.create({
   image: {
     flex: 1,
     justifyContent: 'space-between',
-    height: height / 2 - 50,
+    height: height / 2 - 10,
     padding: 20,
   },
   roundImage: {
@@ -105,5 +107,11 @@ export default StyleSheet.create({
   },
   redText: {
     color: 'red',
+  },
+  map: {
+    width: '100%',
+    height: 300,
+    marginBottom: 40,
+    borderRadius: 15,
   },
 });
